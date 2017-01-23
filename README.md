@@ -1,2 +1,2 @@
 # Algo-labyrinthe
-Générer un algorithme aléatoirement
+Générer un labyrinthe aléatoirement

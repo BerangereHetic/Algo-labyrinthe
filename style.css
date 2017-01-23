@@ -1,0 +1,10 @@
+/*Quand on sauvegarde les préfixes se mettent automatiquement en fonction de Can I use pour enlever aller dans "Modifier" et décocher "Auto préfixer durant la sauvegarde" et si on veut modifier les paramètres d'autopréfixer "Modifier" > "Paramètre autopréfixer" */
+
+
+/*Pour changer une couleur plus facilement faire clique droit sur la couleur à changer et "Edition rapide" */
+
+body {
+    background: #eee;
+    font-family: Helvetica, Arial;
+    font-size: 14px;
+}
