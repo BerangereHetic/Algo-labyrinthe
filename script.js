@@ -1,3 +1,13 @@
-//Les préfixent ne se mettent pas automatiquement en javascript : il faut donc les mettres à la main. (ex: webkit)
+var grid = [];
+var container = document.querySelector('.container');
 
-console.log('Yo');
+function laby()
+{
+    var x =  prompt("Combien de case voulez-vous ?");
+    for (var i=0; i<x; i++)
+    {
+          container.innerHTML += '<div class="square"><div class="square"></div></div>';
+    }
+}
+
+laby();
