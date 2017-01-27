@@ -18,7 +18,7 @@ body {
     justify-content: center;
 }
 
-.square, .squareColumn{
+.square, .square-column{
     width: 50px;
     height: 50px;
 }
@@ -27,7 +27,7 @@ body {
     
 }
 
-.squareColumn{
+.square-column{
     display: block;
     border: 1px solid black;
 }

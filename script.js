@@ -1,40 +1,39 @@
 var grille = document.querySelector('.grille');
 
 var x = parseInt(prompt("Entrez un nombre entre 2 et 10 ?"));
-/*var posX = 0;
-var posY = 0;*/
+var posX = 0;
+var posY = 0;
+
+function init(){
+    
+}
 
 function labyrinthe(){
-    for (var i=0; i<x; i++){
-        grille.innerHTML += '<div class="square"></div>';
-    }
+    do{
+        var posX = randomPos();
+        var posY = randomPos();
+    }while(!((posX==1 || posX==x) || (posY==1 || posY==x)));
     
-    var square = grille.querySelectorAll('.square');
+    posX--;
+    posY--;
     
     for (var i=0; i<x; i++){
+        grille.innerHTML += '<div class="square square-'+i+'"></div>';
+        
+        var square = grille.querySelectorAll('.square');
         for (var j=0; j<x; j++){
-            square[i].innerHTML += '<div class="squareColumn"></div>';
+            if(i==posX && j==posY){
+                square[i].innerHTML += '<div class="square-column square-column-'+j+' yellow"></div>';
+            }else square[i].innerHTML += '<div class="square-column square-column-'+j+'"></div>';
+            
         }
     }
     
 }
 
 function randomPos(){
-    return Math.floor(Math.random()*x ) + 1;
+    return Math.floor((Math.random()*x)+1);
 }
 
-function init(){
-    for(var i=0; i<20; i++){
-        do{
-            var posX = randomPos();
-            var posY = randomPos();
-        }while(!((posX==0 && posX==(x-1)) && (posY==0 && posY==(x-1))));
-        console.log('x' + posX);
-        console.log('y' + posY);
-    }
-    
-    
-}
-
-labyrinthe(x);
-init();
+init(x);
+labyrinthe(x, posX, posY);
